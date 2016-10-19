@@ -1,0 +1,61 @@
+@charset "UTF-8";
+.context{
+    /*background: #ebebeb;*/
+    overflow: hidden;
+}
+.context .cont{
+    margin:15px auto;
+    width: 80%;
+}
+.context .cont h2{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+.context .cont h3{
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+}
+.context .cont div{
+    line-height: 36px;
+    font-size: 14px;
+    color: #999;
+}
+.context .cont p{
+    border: 1px solid blue;
+    line-height: 40px;
+    font-size: 14px;
+    background: #e7e1cd;
+    padding: 0 15px;
+}
+
+.RIGHT{
+    position: fixed;
+    top: 210px;
+    right: 3%;
+    width: 150px;
+
+}
+.RIGHT h1,.RIGHT a{
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    border: 1px solid yellow;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 2px;
+}
+.RIGHT a{
+    color: #ff6700;
+    font-weight: 900;
+}
+.RIGHT h1{
+    background: none;
+}
+.RIGHT a:hover{
+    background: yellow;
+    color: #ffffff;
+}

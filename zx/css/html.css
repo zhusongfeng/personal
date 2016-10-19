@@ -1,0 +1,90 @@
+@charset "UTF-8";
+h1{
+    font-size: 24px;
+    color: coral;
+    text-align: center;
+}
+.tops{
+    padding:10px 0 ;
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    color: #eeeeee;
+    font-size: 12px;
+}
+.tops span {
+    margin-right: 10px;
+}
+.tops a{
+    margin-left: 10px;
+    color: #ccc;
+}
+.tops a:hover{
+    color: blue;
+}
+.cons{
+    border-top:2px solid #eeeeee ;
+}
+.context1 .box2{
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+}
+.context1 .box2 {
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+}
+.context1 .box2 p{
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 900;
+}
+.context1 #con1{
+    height:6182px;
+    display: none;
+}
+.context1 #con2{
+    height:4592px;
+    display: none;
+}
+.context1 #con3{
+    height: 2402px;
+    display: none;
+}
+.list{
+    position: fixed;
+    top:200px;
+    right: 200px;
+    padding-top: 50px;
+    margin-left:800px ;
+    width: 210px;
+    height: 40px;
+}
+.list li{
+    margin-right: 10px;
+    float: left;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+}
+.list li a{
+    display: block;
+    width: 58px;
+    height: 38px;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+    color: darkblue;
+    line-height: 38px;
+    text-align: center;
+}
+.list li a:hover{
+    background: #eeeeee;
+    color: deepskyblue;
+}
+.list li.bg{
+    background: #eeeeee;
+}
+.cons div.bg{
+    display: block;
+}

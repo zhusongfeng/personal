@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #000000;
+        }
+        .cons{
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+        .photo ul{
+            width:450px;
+            height:450px;
+            padding:5px;
+            margin:0px auto;
+            background:#6FF;
+            position:relative;
+        }
+        .photo li{
+            width:140px;
+            height:140px;
+            overflow:hidden;
+            margin:5px;
+            float:left;
+            background:#FF0;
+            cursor:move;
+            -webkit-user-select:none;
+        }
+        .photo img{
+            width:150px;
+            height:150px
+        ;}
+    </style>
+</head>
+<body>
+<div class="cons">
+    <div class="photo">
+        <ul class="photo1" id="photo1">
+            <li><img src="img/1.png"></li>
+            <li><img src="img/2.png"></li>
+            <li><img src="img/3.png"></li>
+            <li><img src="img/4.png"></li>
+            <li><img src="img/5.png"></li>
+            <li><img src="img/6.png"></li>
+            <li><img src="img/7.png"></li>
+            <li><img src="img/8.png"></li>
+            <li><img src="img/9.png"></li>
+        </ul>
+    </div>
+</div>
+<script src="utils.min.js" type="text/javascript"></script>
+<script src="tween.min.js" type="text/javascript"></script>
+<script src="event1.js" type="text/javascript"></script>
+<script src="drag_oop.js" type="text/javascript"></script>
+<script type="text/javascript">
+    ~function(){
+        var ul=document.getElementById("photo1");
+        var oLis= utils.children(ul,"li");
+        console.log(ul,oLis);
+        for(var i=oLis.length-1;i>=0;i--){
+            var oLi=oLis[i];
+            oLi.style.left=(oLi.l=oLi.offsetLeft)+"px";
+            oLi.style.top=(oLi.t=oLi.offsetTop)+"px";
+            oLi.style.position	="absolute";
+            oLi.style.margin=0;
+            new Drag(oLi).on("dragstart",increaseIndex).on("dragend",changePosition).on("dragging",test);
+
+        }
+        var zIndex=0;
+        function increaseIndex(){
+            this.ele.style.zIndex=++zIndex;
+        }
+
+        function goBack(){
+            zhiAnimate(this.ele,{left:this.ele.l,top:this.ele.t},700,3)
+        }
+        function hitedTest(r,b){
+            if(b.offsetLeft+b.offsetWidth<r.offsetLeft||b.offsetTop+b.offsetHeight<r.offsetTop||b.offsetLeft>r.offsetLeft+r.offsetWidth||b.offsetTop>r.offsetTop+r.offsetHeight){
+                return false;
+            }else{	return true;}
+        }
+        function test(){
+            this.aHited=[];
+            for(var i=0;i<oLis.length;i++){
+                var oLi=oLis[i];var curEle=this.ele;
+                oLi.style.background="";
+                if(oLi==curEle)continue;
+                if(hitedTest(curEle,oLi)	){
+                    oLi.style.background="black";
+                    this.aHited.push(oLi);
+                }
+            }
+
+        }
+
+        function changePosition(){
+            var a=this.aHited;
+            var ele=this.ele
+            if(a&&a.length){
+                for(var i=0;i<a.length;i++){
+                    a[i].distance=Math.pow(ele.offsetLeft-a[i].offsetLeft,2)+Math.pow(ele.offsetTop-a[i].offsetTop,2);
+                }
+                a.sort(function(a,b){return a.distance-b.distance});
+
+                var shortest=a[0];
+                shortest.style.backgroundColor="green";
+                zhiAnimate(shortest,{left:ele.l,top:ele.t},700,3);
+                zhiAnimate(ele,{left:shortest.l,top:shortest.t},700,4);
+                var l=ele.l,t=ele.t;
+                ele.l=shortest.l;
+                ele.t=shortest.t;
+                shortest.l=l;
+                shortest.t=t;
+                this.aHited=null;
+            }else{
+                goBack.call(this);
+            }
+
+        }
+    }();
+</script>
+</body>
+</html>

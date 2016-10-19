@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #000000;
+        }
+        .cons{
+            width: 1200px;
+            margin: 50px auto;
+        }
+        .cons .marquee .box {
+            position: relative;
+            margin: 20px auto;
+            padding: 0 5px 0 35px;
+            width: 960px;
+            height: 30px;
+            border: 1px dashed green;
+            background: papayawhip;
+        }
+
+        .cons .marquee .box .boxIcon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 30px;
+            height: 30px;
+            background: url("../img/notic.jpg") no-repeat center center;
+        }
+
+        .cons .marquee .box .boxCon {
+            height: 30px;
+            line-height: 30px;
+            white-space: nowrap; /*强制不换行*/
+            overflow: hidden;
+        }
+
+        #boxCon_begin, #boxCon_end {
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        #boxCon_begin span, #boxCon_end span {
+            color: red;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<div class="cons">
+    <div class="marquee p30 clear">
+        <div class="box">
+            <div class="boxIcon"></div>
+            <div class="boxCon" id="boxCon">
+                <div id="boxCon_begin">
+                    <span>新版经理人论坛上线了</span>：亲爱的用户，为了更好的提供服务，神州英才推出了全新经理人论坛平台。从即日起面向网站所有的会员朋友们开放公测！上线的社区平台，有全新的读版、读帖页样式，增添了更多的交互功能，关注用户需求和使用感受。
+                </div>
+                <div id="boxCon_end">
+                    <span>新版经理人论坛上线了</span>：亲爱的用户，为了更好的提供服务，神州英才推出了全新经理人论坛平台。从即日起面向网站所有的会员朋友们开放公测！上线的社区平台，有全新的读版、读帖页样式，增添了更多的交互功能，关注用户需求和使用感受。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="utils.min.js" type="text/javascript"></script>
+<script src="tween.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    !function(){
+        var boxCon = document.getElementById("boxCon");
+        var boxCon_begin = document.getElementById("boxCon_begin");
+        var boxCon_begin_width = utils.css(boxCon_begin, "width");
+        var timer = window.setInterval(function () {
+            var curLeft = boxCon.scrollLeft;
+            if (curLeft >= boxCon_begin_width) {
+                boxCon.scrollLeft = 0;
+                return;
+            }
+            boxCon.scrollLeft = ++curLeft;
+        }, 10);
+    }();
+</script>
+</body>
+</html>

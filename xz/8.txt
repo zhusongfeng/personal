@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #000000;
+        }
+        .cons{
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+
+        .imgss .div{
+            width: 1030px;
+            margin: 0 auto;
+            height: 202px;
+            border: 3px solid red;
+            overflow: hidden;
+        }
+        .imgss #div ul{
+            width: 2070px;
+            height: 200px;
+        }
+        .imgss .div ul li{
+            float: left;
+            margin-left: 5px;
+            border: 1px solid skyblue;
+            border-radius:50% ;
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .imgss .div ul li.li{
+            margin: 0;
+        }
+        .imgss .div ul li img{
+            width: 200px;
+            height: 200px;
+        }
+        .imgss #div{
+            height: 200px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="cons">
+    <div class="imgss">
+        <div class="div">
+            <div id="div">
+                <ul id="ul">
+                    <li class="li"><img src="img/1.jpg"></li>
+                    <li><img src="img/2.jpg"></li>
+                    <li><img src="img/3.jpg"></li>
+                    <li><img src="img/4.jpg"></li>
+                    <li><img src="img/5.jpg"></li>
+                    <li><img src="img/1.jpg"></li>
+                    <li><img src="img/2.jpg"></li>
+                    <li><img src="img/3.jpg"></li>
+                    <li><img src="img/4.jpg"></li>
+                    <li><img src="img/5.jpg"></li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="utils.min.js" type="text/javascript"></script>
+<script src="tween.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var $=utils;
+    ~function (){
+        var odiv=document.getElementsByClassName("div")[0];
+        var wrap=document.getElementById("div");
+        var oUl=document.getElementById("ul");
+        var conBegin_width=$.css(oUl,"width");
+        function move() {
+            wrap.scrollLeft++;
+            if (wrap.scrollLeft >= conBegin_width / 2) {
+                wrap.scrollLeft = 0;
+            };
+        }
+        var terim=window.setInterval(move,10);
+        odiv.onmouseover=function(){
+            window.clearInterval(terim);
+        };
+        odiv.onmouseout=function(){
+            terim=window.setInterval(move,10);
+        }
+    }();
+</script>
+</body>
+</html>

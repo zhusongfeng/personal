@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            color: #000000;
+        }
+        .cons{
+            width: 1200px;
+            margin: 50px auto;
+        }
+
+
+        .glass #box {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            width: 300px;
+            height: 300px;
+            box-shadow: 4px 4px 10px 0 #616161;
+        }
+        .glass #box img {
+            width: 100%;
+            height: 100%;
+        }
+        .glass #mark {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background: #000;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+            cursor: move;
+        }
+        .glass #boxDel {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 360px;
+            width: 300px;
+            height: 300px;
+            box-shadow: 4px 4px 10px 0 #616161;
+            overflow: hidden;
+        }
+        .glass #boxDel img {
+            width: 300%;
+            height: 300%;
+        }
+    </style>
+</head>
+<body>
+<div class="cons">
+    <div class="glass">
+        <div id="box">
+            <img src="img/iphone.jpg"/>
+            <div id="mark"></div>
+        </div>
+        <div id="boxDel">
+            <img src="img/iphone_big.jpg"/>
+        </div>
+    </div>
+</div>
+<script src="utils.min.js" type="text/javascript"></script>
+<script src="tween.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    -function(){
+        var box = document.getElementById("box"), mark = document.getElementById("mark");
+        var boxDel = document.getElementById("boxDel"), boxImg = boxDel.getElementsByTagName("img")[0];
+        function computedMarkPos(e) {
+            e = e || window.event;
+            var curL = e.clientX - box.offsetLeft - mark.offsetWidth / 2;
+            var curT = e.clientY - box.offsetTop - mark.offsetHeight / 2;
+            var minL = 0, minT = 0, maxL = box.offsetWidth - mark.offsetWidth, maxT = box.offsetHeight - mark.offsetHeight;
+            curL = curL <= minL ? minL : (curL >= maxL ? maxL : curL);
+            curT = curT <= minT ? minT : (curT >= maxT ? maxT : curT);
+
+            utils.css(mark, {
+                left: curL,
+                top: curT
+            });
+            utils.css(boxImg, {
+                marginTop: -curT * 3,
+                marginLeft: -curL * 3
+            });
+        }
+        box.onmouseenter = function (e) {
+            utils.css(mark, "display", "block");
+            utils.css(boxDel, "display", "block");
+            computedMarkPos(e);
+        };
+        box.onmousemove = computedMarkPos;
+        box.onmouseleave = function (e) {
+            utils.css(mark, "display", "none");
+            utils.css(boxDel, "display", "none");
+        };
+    }();
+</script>
+</body>
+</html>

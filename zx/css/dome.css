@@ -1,0 +1,574 @@
+@charset "UTF-8";
+body{
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.lefts{
+    left: 0;
+}
+.cons h1{
+    margin-top: 30px;
+    font-size: 20px;
+    color: #0099CC;
+    line-height: 40px;
+    text-align: center;
+}
+.cons h2{
+    font-size: 18px;
+    line-height: 50px;
+    color: #000000;
+    padding-left: 30px;
+}
+.cons .ps1{
+    height: 50px;
+    padding:30px 0;
+}
+.cons .ps1 a{
+    display: block;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    text-align: center;
+    float: right;
+    margin-right: 100px;
+    background: #ebebeb;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 20px;
+}
+.cons .ps1 a:hover{
+    background: #ff6700;
+    color: #ffffff;
+}
+
+/*  选项卡  */
+.cons .tab{
+    width: 100%;
+    height:230px ;
+}
+.cons .tab ul{
+    position: relative;
+    top: -1px;
+    height: 50px;
+}
+.cons .tab ul li{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 30px;
+}
+.cons .tab ul li a{
+    display: block;
+    height: 100%;
+    padding: 0 30px;
+    font-size: 20px;
+    border: 1px solid red;
+}
+.cons .tab ul li a.bg,.cons .tab ul li a:hover{
+    border-bottom: 1px solid lightblue;
+    background: lightblue;
+}
+.cons .tab div{
+    display: none;
+    width: 1148px;
+    height: 175px;
+    border: 1px solid red;
+    margin-bottom: 2px;
+    font-size: 50px;
+    line-height: 175px;
+    text-align: center;
+    background: lightblue;
+}
+.cons .tab div.bg{
+    display: block;
+}
+
+/* 验证码 */
+.cons .case1{
+    width: 575px;
+    height: 192px;
+    overflow: hidden;
+}
+.cons .case1 h5{
+    line-height: 40px;
+    text-align: left;
+    font-size: 18px;
+    color: lightcoral;
+}
+.cons .case1 div{
+    float: left;
+}
+.cons .case1 div .text{
+    margin:20px 0 ;
+    padding-left: 20px;
+    width: 280px;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid skyblue;
+    outline: none
+}
+.cons .case1 div{
+    height: 152px;
+}
+.cons .case1 div .btn{
+    margin-bottom:20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    background: coral;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+.cons .case1 div a{
+    margin: 20px 0 51px 20px;
+    padding: 0 20px;
+    display: block;
+    width: 65px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 20px;
+    text-align: center;
+    background:#f68666;
+    background: -webkit-linear-gradient(bottom right, coral, cornflowerblue,yellow,fuchsia,burlywood,lightblue,bisque);
+    background: -moz-linear-gradient(bottom right, coral, cornflowerblue,yellow,fuchsia,burlywood,lightblue,bisque);
+    background: -ms-linear-gradient(bottom right, coral, cornflowerblue,yellow,fuchsia,burlywood,lightblue,bisque);
+    background: -o-linear-gradient(bottom right, coral, cornflowerblue,yellow,fuchsia,burlywood,lightblue,bisque);
+    background: linear-gradient(bottom right, coral, cornflowerblue,yellow,fuchsia,burlywood,lightblue,bisque);
+
+}
+.cons .case1{
+    position: relative;
+}
+.cons .case1 p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 0;
+    background: rgba(0,0,0,.5);
+    overflow: hidden;
+    text-align: center;
+
+}
+.cons .case1 p span{
+    font-size: 30px;
+    line-height: 192px;
+    color: white;
+}
+.cons .case1 p a{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f68666;
+}
+/* 投票 */
+.cons .box {
+    margin: 20px auto;
+    padding: 20px;
+    width: 400px;
+    border: 1px solid darkkhaki;
+    border-radius: 5px;
+}
+.cons .box h6 {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px dashed saddlebrown;
+    font-size: 20px;
+}
+.cons .box .submitBtn {
+    margin-top: 20px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border: 1px solid darkkhaki;
+    cursor: pointer;
+    background: cornsilk;
+    font-size: 20px;
+}
+.cons .box .submitBtn span {
+    font-size: 26px;
+    color: red;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+/* 排序 */
+.cons .rank .box {
+    margin: 10px auto;
+    padding: 20px;
+    width: 900px;
+    height: 350px;
+    border: 1px solid darkcyan;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px 0 grey;
+}
+.cons .rank .box table {
+    border-collapse: collapse;
+    height: 350px;
+}
+.cons .rank .box th,.cons .rank .box td{
+    font-size:18px ;
+}
+.cons .rank .box thead tr {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background: cornflowerblue;
+}
+.cons .rank .box thead tr th {
+    width: 225px;
+    color: #fff;
+}
+.cons .rank .box thead tr th.cursor {
+    cursor: pointer;
+}
+.cons .rank .box tbody tr {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.cons .rank .box tbody tr td {
+    width: 225px;
+}
+.cons .rank .box tbody tr.bg {
+    background: lightblue;
+}
+
+/*跑马灯*/
+.cons .marquee .box {
+    position: relative;
+    margin: 20px auto;
+    padding: 0 5px 0 35px;
+    width: 960px;
+    height: 30px;
+    border: 1px dashed green;
+    background: papayawhip;
+}
+.cons .marquee .box .boxIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background: url("../img/notic.jpg") no-repeat center center;
+}
+.cons .marquee .box .boxCon {
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap; /*强制不换行*/
+    overflow: hidden;
+}
+#boxCon_begin, #boxCon_end {
+    display: inline-block;
+    font-size: 16px;
+}
+#boxCon_begin span, #boxCon_end span {
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 图片延迟加载*/
+.imgs{
+    position: relative;
+}
+.imgs .banner{
+    margin: 0 auto;
+    width: 500px;
+    height: 200px;
+    border: 1px solid green;
+    background: url("../img/default.gif") no-repeat center center #e1e1e1;
+}
+.imgs .banner img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+#button{
+    position: absolute;
+    left: 50px;
+    bottom:50px;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+/* 图片无缝滚动 */
+.imgss .div{
+    width: 1030px;
+    margin: 0 auto;
+    height: 202px;
+    border: 3px solid red;
+    overflow: hidden;
+}
+.imgss #div ul{
+    width: 2070px;
+    height: 200px;
+}
+.imgss .div ul li{
+    float: left;
+    margin-left: 5px;
+    border: 1px solid skyblue;
+    border-radius:50% ;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+.imgss .div ul li.li{
+    margin: 0;
+}
+.imgss .div ul li img{
+    width: 200px;
+    height: 200px;
+}
+.imgss #div{
+    height: 200px;
+    overflow: hidden;
+}
+
+/* 菜单 */
+.navL .nav1,.navL .nav2{
+    float: left;
+    padding-left: 50px;
+    height: 200px;
+}
+.navL .nav1 div,.navL .nav2 div{
+    position: relative;
+    width: 150px;
+    font-size: 16px;
+    line-height: 50px;
+    height: 50px;
+    background: #DDEDFB;
+    text-align: center;
+    cursor: pointer;
+}
+.navL .nav1 div ul,.navL .nav2 div ul {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    display: none;
+}
+.navL .nav1 div ul li,.navL .nav2 div ul li{
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    background:#cccccc ;
+    text-align: center;
+}
+.navL .nav1 div ul li:hover,.navL .nav2 div ul li:hover{
+    background: #ff6700;
+    color: #ffffff;
+}
+.navL .nav1 div:hover,.navL .nav2 div:hover{
+    background:#999999;
+    color: #DDEDFB;
+}
+.navL .nav1 div:hover ul {
+    display: block;
+}
+.navL .nav2 div ul{
+    display: block;
+    height: 0;
+}
+.navL .nav3{
+    position: relative;
+}
+.navL .nav3 div{
+    position: absolute;
+    left: 50px;
+    z-index: 30;
+}
+.navL .nav3 div ul{
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    left: 150px;
+    width: 0;
+
+}
+
+/* 轮播图 */
+.carousel  .banner {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    height: 300px;
+    overflow: hidden;
+}
+.carousel  .banner .bannerInner {
+    width: 100%;
+    height: 100%;
+    background: url("../img/default.gif") no-repeat center center #e1e1e1;
+}
+.carousel  .banner .bannerInner div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.carousel  .banner .bannerInner img {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+.carousel  .banner .bannerTip {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    height: 18px;
+    overflow: hidden;
+}
+.carousel  .banner .bannerTip li {
+    float: left;
+    margin-left: 10px;
+    width: 18px;
+    height: 18px;
+    background: lightblue;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.carousel  .banner .bannerTip li.bg {
+    background: red;
+}
+.carousel  .banner a {
+    display: none;
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    margin-top: -22.5px;
+    width: 30px;
+    height: 45px;
+    background-image: url("../img/pre.png");
+
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+.carousel .banner a:hover{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+.carousel  .banner a.bannerLeft {
+    left: 20px;
+    background-position: 0 0;
+}
+.carousel  .banner a.bannerRight {
+    right: 20px;
+    background-position: -50px 0;
+}
+
+/*  放大镜 */
+.glass{
+    position: relative;
+    height: 320px;
+    cursor: move;
+}
+/* 放大镜 */
+.glass #box {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 4px 4px 10px 0 #616161;
+}
+.glass #box img {
+    width: 100%;
+    height: 100%;
+}
+.glass #mark {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: move;
+}
+.glass #boxDel {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 360px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 4px 4px 10px 0 #616161;
+    overflow: hidden;
+}
+.glass #boxDel img {
+    width: 300%;
+    height: 300%;
+}
+
+/* 照片墙 */
+.photo ul{
+    width:450px;
+    height:450px;
+    padding:5px;
+    margin:0px auto;
+    background:#6FF;
+    position:relative;
+}
+.photo li{
+    width:140px;
+    height:140px;
+    overflow:hidden;
+    margin:5px;
+    float:left;
+    background:#FF0;
+    cursor:move;
+    -webkit-user-select:none;
+}
+.photo img{
+    width:150px;
+    height:150px
+;}
+
+/* 遮罩 */
+.follow .box {
+    margin: 50px auto;
+    width: 724px;
+    overflow: hidden;
+}
+.follow .box li {
+    position: relative;
+    float: left;
+    margin-right: 8px;
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.follow .box li.last {
+    margin-right: 0;
+}
+.follow .box li img {
+    width: 100%;
+    height: 100%;
+}
+.follow .box li .mark {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 179, 138);
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+}

@@ -1,0 +1,80 @@
+@charset "UTF-8";
+.context .LR{
+    width: 700px;
+    margin: 0 auto;
+}
+.context .LR h3{
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+}
+.context .LR div{
+
+    background:#DDEDFB;
+    border: 2px solid #0099CC;
+    border-radius:10px ;
+    margin-top: 30px;
+    overflow: hidden;
+}
+.context .LR div h5{
+    padding: 0 20px;
+    height: 30px;
+    line-height: 30px;
+    background: #F2F6FB;
+    border-bottom:2px solid   #0099CC;
+}
+.context .LR div h5 span{
+    font-size: 14px;
+}
+.context .LR div p{
+    line-height: 30px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.rights{
+    background: #ececec;
+    position: fixed;
+    height: 420px;
+    right: -100px;
+    bottom: 60px;
+    width:100px;
+}
+.rights a{
+    display: block;
+    width:100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    background: #ececec;
+}
+.rights a:hover{
+    background:  #666;
+    color: #ffffff;
+}
+.rights a.bg{
+    background:  #666;
+    color: #ffffff;
+}
+.bg{
+    background:  red;
+    color: red;
+}
+.list:hover{
+    background:  #666;
+    color: #ffffff;
+}
+.list{
+    position: fixed;
+    right: 0;
+    bottom: 60px;
+    cursor: pointer;
+    width:100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: center;
+    background: #ececec;
+
+}
