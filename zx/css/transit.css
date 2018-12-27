@@ -47,7 +47,7 @@ hr {
 }
 .width{
     margin: 0 auto;
-    width: 1150px;
+    width: 1300px;
 }
 .title{
     -moz-user-select: none;
@@ -150,7 +150,7 @@ hr {
 .header .nav .logo{
     width: 200px;
     height: 70px;
-    margin-right: 100px;
+    margin-right: 20px;
 }
 .header .nav .logo a,.header .nav .logo a img{
     display: block;
@@ -158,7 +158,7 @@ hr {
     height: 100%;
 }
 .header .nav .navList{
-    width: 850px;
+    width: 1050px;
     height: 100%;
 }
 .header .nav .navList li{
